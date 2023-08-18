@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Trading App</title>
+</head>
+<body>
+    <h2>Stock Trading App</h2>
+    <section>
+        <h3>Input your Alpaca API keys:</h3>
+        <label>API Key ID:
+            <input id="apiKey" type="text">
+        </label>
+        <br>
+        <label>Secret Key:
+            <input id="secretKey" type="password">
+        </label>
+        <br>
+        <button onclick="getAccountDetails()">Load Account Details</button>
+    </section>
+
+    <section>
+        <h3>Account Details:</h3>
+        <p>Net Worth: $<span id="netWorth">0.00</span></p>
+        <p>Stocks Owned: <span id="stocksOwned">0</span></p>
+    </section>
+
+    <section>
+        <h3>Trade Stocks</h3>
+        <label>Stock Symbol:
+            <input id="stockSymbol" type="text">
+        </label>
+        <br>
+        <label>Quantity:
+            <input id="stockQuantity" type="number" min="1">
+        </label>
+        <br>
+        <button onclick="buyStock()">Buy</button>
+        <button onclick="sellStock()">Sell</button>
+    </section>
+
+    <section>
+        <h3>Owned Stocks:</h3>
+        <ul id="ownedStocksList"></ul>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+</html>
