@@ -26,8 +26,8 @@ app.post('/create-checkout-session', async (req, res) => {
             quantity: 1,
         }],
         mode: 'payment',
-        success_url: 'YOUR_SUCCESS_URL',
-        cancel_url: 'YOUR_CANCEL_URL',
+        success_url: 'https://shop-of-masons.vercel.app/',
+        cancel_url: 'https://shop-of-masons.vercel.app/',
     });
 
     res.json({ id: session.id });
