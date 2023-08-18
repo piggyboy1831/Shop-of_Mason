@@ -1,6 +1,6 @@
 
 const Stripe = require('stripe');
-const stripe = new Stripe('YOUR_STRIPE_SECRET_KEY'); // Please replace this with your secret key
+const stripe = new Stripe('sk_test_51NgJv6JEGWdGSBGGJD2LvNetCnpVHlnmZ9ATXCeZGKFrCOm66L2j3EpJa151EeIjoyU5zh79xbIFQUYH9ry9PRXr00vrvVRwke'); // Please replace this with your secret key
 
 module.exports = async (req, res) => {
     if (req.method === 'POST') {
@@ -18,8 +18,8 @@ module.exports = async (req, res) => {
                     quantity: 1,
                 }],
                 mode: 'payment',
-                success_url: 'YOUR_SUCCESS_URL',
-                cancel_url: 'YOUR_CANCEL_URL',
+                success_url: 'https://shop-of-masons.vercel.app/',
+                cancel_url: 'https://shop-of-masons.vercel.app/',
             });
             res.status(200).json({ id: session.id });
         } catch (error) {
