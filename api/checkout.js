@@ -1,7 +1,6 @@
 
 const Stripe = require('stripe');
-const stripe = new Stripe('sk_test_51NgJv6JEGWdGSBGGJD2LvNetCnpVHlnmZ9ATXCeZGKFrCOm66L2j3EpJa151EeIjoyU5zh79xbIFQUYH9ry9PRXr00vrvVRwke'); // Please replace this with your secret key
-
+const stripe = new Stripe('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'); 
 module.exports = async (req, res) => {
     if (req.method === 'POST') {
         try {
@@ -11,9 +10,9 @@ module.exports = async (req, res) => {
                     price_data: {
                         currency: 'usd',
                         product_data: {
-                            name: 'Your Product Name',
+                            name: 'Coding Help',
                         },
-                        unit_amount: 10000, // This is in cents, so $100.00
+                        unit_amount: 10000, 
                     },
                     quantity: 1,
                 }],
