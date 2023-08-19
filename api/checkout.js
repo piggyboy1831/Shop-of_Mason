@@ -28,3 +28,4 @@ module.exports = async (req, res) => {
         res.status(405).json({ error: 'Only POST requests are allowed' });
     }
 };
+
