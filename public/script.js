@@ -1,4 +1,4 @@
-var stripe = Stripe('pk_test_51NgJv6JEGWdGSBGGi5MsU1ELs3cmi7lEWtVWAotSUymF3s9bn8LpEf1WFLNCTmKWBKHFkEgNS9qc4hiH8xF3fJvL00HFTnUmLw');
+var stripe = Stripe('pk_live_51NgJv6JEGWdGSBGG6m79uQhK2T2fivcYYydMNJV3nLgfXq83nGYo3wBQ4X8oFyIYvbbQWVJ5nzXBZSHRBrJoySCa00QeYO6Tvo');
 document.getElementById('checkout-button').addEventListener('click', async () => {
     // Create a Checkout Session using your Stripe secret key
     const session = await fetch('/api/checkout', {
