@@ -4,7 +4,6 @@ document.getElementById('checkout-button').addEventListener('click', async () =>
     const session = await fetch('/api/checkout', {
         method: 'POST',
     }).then(res => res.json());
-
    
     const result = await stripe.redirectToCheckout({
         sessionId: session.id,
